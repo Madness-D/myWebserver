@@ -50,7 +50,7 @@ public:
         pthread_cond_destroy(&m_cond);
     }
 
-    bool wait(pthread_mutex_t *mutex){//⭐这里不太一样
+    bool wait(pthread_mutex_t *mutex){//⭐这里不太一样，采用的视频里面的写法
         return pthread_cond_wait(&m_cond,mutex) == 0;
     }
    
